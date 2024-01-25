@@ -1,4 +1,6 @@
-const express = require('express');
+/* global process */
+
+import express from 'express';
 const app = express();
 
 // Define routes
