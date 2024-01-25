@@ -14,27 +14,35 @@ To run this project, you will need Node.js and npm installed on your system. You
 
 First, clone the repository to your local machine:
 
-```bash
-
-git clone https://github.com/NahomAlemu/basic-express
+```
+https://github.com/NahomAlemu/basic-express
+```
+```
 cd basic-express
+```
 
-Then, install the required dependencies:
-
+## Then, install the required dependencies:
+```
 npm install
-
+```
 ### Running the Server
 
 To start the server, run:
-
-```bash
+```
 npm start
-
+```
 The server will start on http://localhost:3000. You can access the following routes:
 
 GET / - Displays a "Hello World" message.
 GET /about - Shows the "About page" message.
 Any other route will display a "404 - Not Found" message.
 
+
+Screenshot of ESLint displaying its version
+
+<img width="806" alt="eslint" src="https://github.com/NahomAlemu/basic-express/assets/55855783/ae8b2aa7-c5bf-4b48-9af5-9295cc91e6b4">
+
+
 ## License
 This project is licensed under the ISC License.
+
