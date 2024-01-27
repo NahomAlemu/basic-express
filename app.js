@@ -1,5 +1,5 @@
 /* global process */
-// testing
+// testing gpg
 import express from 'express';
 const app = express();
 
