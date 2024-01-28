@@ -1,6 +1,7 @@
 {
   "name": "basicexpress",
   "version": "0.1.0",
+  "type": "module",
   "description": "expermental express",
   "main": "app.js",
   "scripts": {

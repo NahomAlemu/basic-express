@@ -1,6 +1,6 @@
 /* global process */
 
-import express from 'express';
+const express = require('express');
 const app = express();
 
 // Define routes
@@ -12,6 +12,11 @@ app.get('/about', (req, res) => {
     res.send('About page');
 });
 
+app.get('/get', (req, res) => {
+    console.log(req.query);
+    res.send('Query string data received');
+ });
+ 
 // Handle 404
 app.use((req, res) => {
     res.status(404).send('404 - Not Found');
@@ -20,5 +25,5 @@ app.use((req, res) => {
 // Start the server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+    console.log(`Server is successfully running on port ${PORT}`);
 });
