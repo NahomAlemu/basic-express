@@ -31,10 +31,16 @@ To start the server, run:
 ```
 npm start
 ```
-The server will start on http://localhost:3000. You can access the following routes:
+The server will start on http://localhost:3000. 
+
+You can access the following routes:
 
 GET / - Displays a "Hello World" message.
+
+
 GET /about - Shows the "About page" message.
+
+
 GET /get - Receives query string data and logs it to the console. You can test this route by accessing `http://localhost:3000/get?param1=value1&param2=value2`, replacing `param1`, `param2`, `value1`, and `value2` with your own query parameters.
 Any other route will display a "404 - Not Found" message.
 
