@@ -23,6 +23,20 @@ app.get('/get', (req, res) => {
     res.send('Query string data received');
  });
 
+// First route handler for /foo
+app.get('/foo', (req, res, next) => {
+    if (Math.random() > 0.5) {
+        res.send('sometimes this');
+    } else {
+        next();
+    }
+});
+
+// Second route handler for /foo
+app.get('/foo', (req, res) => {
+    res.send('and sometimes that');
+});
+
 // Handle 404
 app.use((req, res) => {
     res.status(404).send('404 - Not Found');
