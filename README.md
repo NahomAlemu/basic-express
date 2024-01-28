@@ -40,6 +40,8 @@ GET / - Displays a "Hello World" message.
 
 GET /about - Shows the "About page" message.
 
+Regular expression route for admin/user - The server includes a route that uses a regular expression to match URLs like `/admin/settings` and `/user/profile`. It responds with the role (admin or user) and the path.
+
 
 GET /get - Receives query string data and logs it to the console. You can test this route by accessing `http://localhost:3000/get?param1=value1&param2=value2`, replacing `param1`, `param2`, `value1`, and `value2` with your own query parameters.
 Any other route will display a "404 - Not Found" message.
@@ -49,7 +51,8 @@ Any other route will display a "404 - Not Found" message.
 To test the query string functionality:
 1. Start the server as described above.
 2. Use a browser or a tool like Postman to send a GET request to `http://localhost:3000/get` with query parameters, such as `http://localhost:3000/get?name=John&age=30`.
-3. Check the server console to see the output of the query parameters.
+3. Use a browser or a tool like Postman to send requests to URLs like `http://localhost:3000/admin/settings` or `http://localhost:3000/user/profile`.
+4. Check the server console to see the output of the query parameters.
 
 
 Screenshot of ESLint displaying its version
