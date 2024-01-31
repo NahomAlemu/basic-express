@@ -1,7 +1,11 @@
 /* global process */
 
 const express = require('express');
+const path = require('path');
 const app = express();
+
+// Serve static files from the 'public' directory
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Define routes
 app.get('/', (req, res) => {
@@ -37,13 +41,17 @@ app.get('/foo', (req, res) => {
     res.send('and sometimes that');
 });
 
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'dog-breeds.html'));
+});
+
 // Handle 404
 app.use((req, res) => {
     res.status(404).send('404 - Not Found');
 });
 
 // Start the server
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
     console.log(`Server is successfully running on port ${PORT}`);
 });

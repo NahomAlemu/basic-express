@@ -31,7 +31,7 @@ To start the server, run:
 ```
 npm start
 ```
-The server will start on http://localhost:3000. 
+The server will start on http://localhost:3001. 
 
 You can access the following routes:
 
@@ -42,17 +42,17 @@ GET /about - Shows the "About page" message.
 
 Regular expression route for admin/user - The server includes a route that uses a regular expression to match URLs like `/admin/settings` and `/user/profile`. It responds with the role (admin or user) and the path.
 
-Use a browser or a tool like Postman to send requests to URLs like `http://localhost:3000/admin/settings` or `http://localhost:3000/user/profile`.
+Use a browser or a tool like Postman to send requests to URLs like `http://localhost:3001/admin/settings` or `http://localhost:3001/user/profile`.
 
 
-GET /get - Receives query string data and logs it to the console. You can test this route by accessing `http://localhost:3000/get?param1=value1&param2=value2`, replacing `param1`, `param2`, `value1`, and `value2` with your own query parameters.
+GET /get - Receives query string data and logs it to the console. You can test this route by accessing `http://localhost:3001/get?param1=value1&param2=value2`, replacing `param1`, `param2`, `value1`, and `value2` with your own query parameters.
 Any other route will display a "404 - Not Found" message.
 
 ### Testing Query String Functionality
 
 To test the query string functionality:
 1. Start the server as described above.
-2. Use a browser or a tool like Postman to send a GET request to `http://localhost:3000/get` with query parameters, such as `http://localhost:3000/get?name=John&age=30`.
+2. Use a browser or a tool like Postman to send a GET request to `http://localhost:3001/get` with query parameters, such as `http://localhost:3001/get?name=John&age=30`.
 3. Check the server console to see the output of the query parameters.
 
 ### Conditional Routing
@@ -62,7 +62,7 @@ The server implements conditional routing on the `/foo` route. When a request is
 1. "sometimes this" - Served directly by the first route handler for `/foo`.
 2. "and sometimes that" - Served by a second route handler for `/foo`, which is reached when the first handler calls `next()`.
 
-To test this route, repeatedly send GET requests to `http://localhost:3000/foo` and observe the alternating responses.
+To test this route, repeatedly send GET requests to `http://localhost:3001/foo` and observe the alternating responses.
 
 
 Screenshot of ESLint displaying its version
